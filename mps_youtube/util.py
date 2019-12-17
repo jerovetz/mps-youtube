@@ -168,7 +168,7 @@ def F(key, nb=0, na=0, textlib=None):
     text = textlib[key]
     percent_fmt = textlib.get(key + "_")
 
-    if percent_fmt:
+    if percent_fmt and g.no_colors is False:
         text = re.sub(r"\*", r"%s", text) % percent_fmt
 
     text = text.replace("&&", "%s")

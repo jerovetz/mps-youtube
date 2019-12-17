@@ -4,7 +4,6 @@ import os
 import re
 import sys
 
-
 if sys.stdout.isatty():
     white = "\x1b[%sm" % 0
     ul = "\x1b[%sm" * 3 % (2, 4, 33)
@@ -25,3 +24,8 @@ def c(colour, text):
 def charcount(s):
     """ Return number of characters in string, with ANSI color codes excluded. """
     return len(ansirx.sub('', s))
+
+def reset_colors():
+    """ Reset color codes for being monochrome. """
+    global r, g, y, b, p, w, ul
+    r, g, y, b, p, w, ul = "","","","","","",""

@@ -224,6 +224,7 @@ def _process_cl_args():
     parser.add_argument('--no-autosize', action='store_true')
     parser.add_argument('--no-preload', action='store_true')
     parser.add_argument('--no-textart', action='store_true')
+    parser.add_argument('--no-colors', action='store_true')
     args = parser.parse_args()
 
     if args.version:
@@ -254,6 +255,10 @@ def _process_cl_args():
 
     if args.no_textart:
         g.no_textart = True
+
+    if args.no_colors:
+        g.no_colors = True
+        c.reset_colors()
 
     g.argument_commands = args.commands
 

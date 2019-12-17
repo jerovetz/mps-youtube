@@ -34,6 +34,7 @@ preloading = []
 # expiry = 5 * 60 * 60  # 5 hours
 no_clear_screen = False
 no_textart = False
+no_colors = False
 max_retries = 3
 max_cached_streams = 1500
 username_query_cache = collections.OrderedDict()
